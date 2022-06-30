@@ -40,3 +40,11 @@
 <a href="" target="_blank"><img src="https://img.shields.io/badge/JAVA-ff0000?style=for-the-badge&logo=CoffeeScript&logoColor=white"></a>
 <a href="https://www.thymeleaf.org/" target="_blank"><img src="https://img.shields.io/badge/Thymeleaf-007396?style=for-the-badge&logo=Thymeleaf&logoColor=white"></a>
 
+### 진행과정
+
+| week\month | 3 | 4 | 5 | 6 | 7 |
+| ------ | ------ | ------ | ------ |
+| 1 | ------ |  |  |  |  |  |  |
+| 1 | ------ |  |  |  |  |  |  |
+| 1 | ------ |  |  |  |  |  |  |
+| 1 | ------ |  |  |  |  |  |  |
