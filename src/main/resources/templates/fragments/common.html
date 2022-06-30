@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<body>
+
+  <head th:fragment="head(title)">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+    <!-- CSS -->
+    <link rel="stylesheet" th:href="@{/css/index.css}" />
+
+    <title th:text="${title}">사고, 팔고, 공구하고</title>
+  </head>
+
+  <div class="d-flex flex-column flex-md-row align-items-center p-2 px-md-2 bg-white border-bottom shadow-sm"
+    th:fragment="menu">
+    <div style="margin-left: 10%"></div>
+    <a th:href="@{/}">
+      <img class="mr-2" width="40px" th:src="@{/images/gbsw.png}" />
+    </a>
+    <a class="mr-md-auto" th:href="@{/}">
+      <img th:src="@{/images/title.png}" />
+    </a>
+    <div>
+      <a class="toLink" th:href="@{/board/buy/list}">구매글</a>
+      <a class="toLink" th:href="@{/board/sell/list}">판매글</a>
+      <a class="toLink" th:href="@{/board/cobuy/list}">공구글</a>
+    </div>
+    <div style="margin-left: 8.7%"></div>
+    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+      aria-expanded="false">
+      게시글 작성
+    </a>
+    <div class="dropdown-menu text-center" aria-labelledby="navbarDropdown">
+      <a class="dropdown-item" th:href="@{/board/buy/form}">구매글</a>
+      <a class="dropdown-item" th:href="@{/board/sell/form}">판매글</a>
+      <a class="dropdown-item" th:href="@{/board/cobuy/form}">공구글</a>
+    </div>
+    <form class="form-inline mt-2 mt-md-0 text-center" method="get" th:action="@{/board/list}">
+      <input class="form-control mr-sm-2" type="text" aria-label="Search" name="searchList"
+        th:value="${param.searchList}" />
+      <button class="btn btn-outline-primary my-2 my-sm-0 mx-auto" type="submit">
+        검색
+      </button>
+    </form>
+    <a class="btn btn-outline-primary ml-2" style="width: 80px;" th:href="@{/account/login}"
+      sec:authorize="!isAuthenticated()">로그인</a>
+    <div class="dropdown ml-2" style="text-align: center;" sec:authorize="isAuthenticated()">
+      <a class="btn btn-outline-primary px-0" style="width: 80px;" role="button" id="myInformation"
+        data-toggle="dropdown" aria-expanded="false" sec:authentication="name">
+        사용자
+      </a>
+      <div class="dropdown-menu text-center" aria-labelledby="myInformation">
+        <a class="dropdown-item">내 정보</a>
+        <form method="post" th:action="@{/logout}">
+          <button class="dropdown-item" type="submit">로그아웃</button>
+        </form>
+      </div>
+    </div>
+    <div style="margin-left: 9%"></div>
+  </div>
+
+  <div th:fragment="updateForm(division)">
+    <input type="hidden" th:field="*{id}">
+
+    <div style="margin-bottom: 24px;">
+      <span class="fileselect" id="fileName">선택된 파일없음</span>
+      <input type="file" name="file" accept="image/*" id="bizFile" style="display: none;">
+      <label for="bizFile" class="btn btn-primary my-0">파일선택</label>
+    </div>
+
+    <div class="form-group form-title">
+      <input type="text" class="form-control" id="productsTitle" placeholder="상품명을 입력해주세요." th:field="*{title}"
+        th:classappend="${#fields.hasErrors('title')} ? 'is-invalid'">
+      <div class="invalid-feedback" th:if="${#fields.hasErrors('title')}" th:errors="*{title}">
+        제목 에러 메시지
+      </div>
+    </div>
+    <div class="form-group form-price">
+      <input type="number" class="form-control" id="productsPrice" min="0" step="1" placeholder="가격을 입력해주세요. (￦)"
+        th:field="*{price}" th:classappend="${#fields.hasErrors('price')} ? 'is-invalid'">
+      <div class="invalid-feedback" th:if="${#fields.hasErrors('price')}" th:errors="*{price}">
+        가격 에러 메시지
+      </div>
+    </div>
+    <div class="form-group form-description">
+      <textarea class="form-control" id="productsDescription" rows="10" placeholder="상품 설명을 작성해주세요."
+        th:field="*{content}" th:classappend="${#fields.hasErrors('content')} ? 'is-invalid'"></textarea>
+      <div class="invalid-feedback" th:if="${#fields.hasErrors('content')}" th:errors="*{content}">
+        내용 에러 메시지
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary btn-submit">상품 등록하기</button>
+  </div>
+</body>
+
+</html>
