@@ -56,25 +56,34 @@
     </li>
   </ul>
 
-  <!-- <div style="width: 79%; margin: 0 auto; margin-top: 40px;">
+  <div style="width: 79%; margin: 0 auto; margin-top: 40px;">
     <div class="buy-box">
       <div class="mb-2">
         <span style="font-family: 'Noto Sans KR', sans-serif; font-size: 35px;">구매글</span>
       </div>
-      .
       <hr class="line" style="border: 1px solid gainsboro; margin-top: 0;">
       <div style="display: flex;">
-        <li
-          style="margin-right: 10px; list-style:none; max-width: 250px; max-height: 300px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-          <img src="../static/images/garo.jpg" style="width: 100%;">
-        </li>
-        <li
-          style="list-style:none; max-width: 250px; max-height: 300px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-          <img src="../static/images/sero.jpg" style="width: 100%;">
-        </li>
+        <a th:each="buyBoard : ${buyBoards}" th:href="@{/board/buy(id=${buyBoard.id})}">
+          <li class="img-form">
+            <img style="max-height: 200px;" th:src="${buyBoard.filepath}">
+          </li>
+        </a>
       </div>
     </div>
-  </div> -->
+    <div class="sell-box">
+      <div class="mb-2">
+        <span style="font-family: 'Noto Sans KR', sans-serif; font-size: 35px;">판매글</span>
+      </div>
+      <hr class="line" style="border: 1px solid gainsboro; margin-top: 0;">
+      <div style="display: flex;">
+        <a th:each="sellBoard : ${sellBoards}" th:href="@{/board/sell(id=${sellBoard.id})}">
+          <li class="img-form">
+            <img style="max-height: 200px;" th:src="${sellBoard.filepath}">
+          </li>
+        </a>
+      </div>
+    </div>
+  </div>
 
   <script>
     // Slide every slideDelay seconds

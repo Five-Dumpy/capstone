@@ -29,17 +29,25 @@ public class HomeController {
     @GetMapping("/")
     public String index(Model model) {
         List<BuyBoard> buyBoards = buyBoardRepository.findAll(Sort.by(Sort.Direction.DESC, "id"));
-        Iterator<BuyBoard> iter = buyBoards.iterator();
-        while (iter.hasNext()) {
-            String i = iter.next().getFilename();
+        Iterator<BuyBoard> buyIter = buyBoards.iterator();
+        while (buyIter.hasNext()) {
+            String i = buyIter.next().getFilename();
             if (i.equals("noImage.png")) {
-                iter.remove();
+                buyIter.remove();
             }
         }
         model.addAttribute("buyBoards", buyBoards);
 
         List<SellBoard> sellBoards = sellBoardRepository.findAll(Sort.by(Sort.Direction.DESC, "id"));
+        Iterator<SellBoard> sellIter = sellBoards.iterator();
+        while (sellIter.hasNext()) {
+            String i = sellIter.next().getFilename();
+            if (i.equals("noImage.png")) {
+                sellIter.remove();
+            }
+        }
         model.addAttribute("sellBoards", sellBoards);
+
         return "index";
     }
 }
