@@ -25,7 +25,7 @@
 ### Member
 | Name | Email | Role | Github |
 | ------ | ------ | ------ | ------ |
-| 김윤현 | kyhofficial05@gmail.com |  | [Github](https://github.com/KYH-code) |
+| 김윤현 | kyhofficial05@gmail.com | 팀장,  | [Github](https://github.com/KYH-code) |
 | 박대형 | nicenicnic123@gmall.com |  | [Github](https://github.com/eoguddl) |
 | 장휴선 | hyuseonj771@gmail.com |  | [Github](https://github.com/Rongtutu) |
 | 전지현 | wjswlguswjswlgus616@naver.com |  | [Github](https://github.com/jihyeon0616) |
@@ -42,9 +42,10 @@
 
 ### 진행과정
 
-| week\month | 3 | 4 | 5 | 6 | 7 |
-| ------ | ------ | ------ | ------ |
-| 1 | ------ |  |  |  |  |  |  |
-| 1 | ------ |  |  |  |  |  |  |
-| 1 | ------ |  |  |  |  |  |  |
-| 1 | ------ |  |  |  |  |  |  |
+| - | March | April | May | June | July |
+| ------ | ------ | ------ | ------ | ------ | ------ |
+| 1 week | 팀 지원서 제출 | UIUX 디자인 | README 초안 작성 | Front & Back 개발 | Front & Back 추가 보완 |
+| 2 week | 팀 지원서 제출 | UIUX 디자인 | Front 제작 | Front & Back 개발 완료 | 영상 & 자료 제작 |
+| 3 week | 계획서 작성 | Github 페이지 생성 & DB ERD 기획 | PPT 제작 & 발표 | Front & Back 보완 | PPT 제작 & 발표 |
+| 4 week | 계획서 마무리 & PPT 제작 | DB ERD 작성 | Front & Back 개발| Github 페이지 관리 | - |
+| 5 week | PPT 완성 & 발표 | DB ERD 작성 | Front & Back 개발 | 결과물 제출 | - |
