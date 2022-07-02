@@ -49,7 +49,7 @@ public class BuyBoardController {
     }
 
     @GetMapping("/buy/list")  // 판매 페이지 리스트x
-    public String buyList(Model model, @PageableDefault(size = 4) Pageable pageable, @RequestParam(required = false, defaultValue = "") String searchText) {
+    public String buyList(Model model, @PageableDefault(size = 16) Pageable pageable, @RequestParam(required = false, defaultValue = "") String searchText) {
         Page<BuyBoard> buyBoards = buyBoardRepository.findByTitleContainingOrderByIdDesc(searchText, pageable);
         for (BuyBoard board : buyBoards) {
             timeCalService.setElapsedTimeBuy(board);

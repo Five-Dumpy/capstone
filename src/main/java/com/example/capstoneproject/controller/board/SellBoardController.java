@@ -48,7 +48,7 @@ public class SellBoardController {
     }
 
     @GetMapping("/sell/list")  // 판매 페이지 리스트x
-    public String sellList(Model model, @PageableDefault(size = 4) Pageable pageable, @RequestParam(required = false, defaultValue = "") String searchText) {
+    public String sellList(Model model, @PageableDefault(size = 16) Pageable pageable, @RequestParam(required = false, defaultValue = "") String searchText) {
         Page<SellBoard> sellBoards = sellBoardRepository.findByTitleContainingOrderByIdDesc(searchText, pageable);
         for (SellBoard board : sellBoards) {
             timeCalService.setElapsedTimeSell(board);

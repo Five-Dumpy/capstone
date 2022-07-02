@@ -28,25 +28,27 @@ public class HomeController {
 
     @GetMapping("/")
     public String index(Model model) {
+        // 구매
+        int buyCount = 0;
         List<BuyBoard> buyBoards = buyBoardRepository.findAll(Sort.by(Sort.Direction.DESC, "id"));
         Iterator<BuyBoard> buyIter = buyBoards.iterator();
         while (buyIter.hasNext()) {
             String i = buyIter.next().getFilename();
-            if (i.equals("noImage.png")) {
+            if (i.equals("noImage.png") || buyCount >= 20) {
                 buyIter.remove();
-            }
-        }
-        model.addAttribute("buyBoards", buyBoards);
+            } buyCount++;
+        } model.addAttribute("buyBoards", buyBoards);
 
+        // 판매
+        int sellCount = 0;
         List<SellBoard> sellBoards = sellBoardRepository.findAll(Sort.by(Sort.Direction.DESC, "id"));
         Iterator<SellBoard> sellIter = sellBoards.iterator();
         while (sellIter.hasNext()) {
             String i = sellIter.next().getFilename();
-            if (i.equals("noImage.png")) {
+            if (i.equals("noImage.png") || sellCount >= 20) {
                 sellIter.remove();
-            }
-        }
-        model.addAttribute("sellBoards", sellBoards);
+            } sellCount++;
+        } model.addAttribute("sellBoards", sellBoards);
 
         return "index";
     }
