@@ -25,7 +25,7 @@
 ### Member
 | Name | Email | Role | Github |
 | ------ | ------ | ------ | ------ |
-| 김윤현 | kyhofficial05@gmail.com |  | [Github](https://github.com/KYH-code) |
+| 김윤현 | kyhofficial05@gmail.com | 팀장,  | [Github](https://github.com/KYH-code) |
 | 박대형 | nicenicnic123@gmall.com |  | [Github](https://github.com/eoguddl) |
 | 장휴선 | hyuseonj771@gmail.com |  | [Github](https://github.com/Rongtutu) |
 | 전지현 | wjswlguswjswlgus616@naver.com |  | [Github](https://github.com/jihyeon0616) |
