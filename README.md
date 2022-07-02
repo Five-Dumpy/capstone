@@ -44,8 +44,8 @@
 
 | - | March | April | May | June | July |
 | ------ | ------ | ------ | ------ | ------ | ------ |
-| 1 week | 팀 지원서 제출 | UIUX 디자인 |  |  |  |  |
-| 2 week | 팀 지원서 제출 | UIUX 디자인 |  |  |  |  |
-| 3 week | 계획서 작성 | Github 페이지 생성 & DB ERD 기획 |  |  |  |  |
-| 4 week | 계획서 마무리 & PPT 제작 | DB ERD 작성 |  |  |  |  |
-| 5 week | PPT 완성 & 발표 | DB ERD 작성 |  |  |  |  |
+| 1 week | 팀 지원서 제출 | UIUX 디자인 | README 초안 작성 | Front & Back 개발 | Front & Back 추가 보완 |
+| 2 week | 팀 지원서 제출 | UIUX 디자인 | Front 제작 | Front & Back 개발 완료 | 영상 & 자료 제작 |
+| 3 week | 계획서 작성 | Github 페이지 생성 & DB ERD 기획 | PPT 제작 & 발표 | Front & Back 보완 | PPT 제작 & 발표 |
+| 4 week | 계획서 마무리 & PPT 제작 | DB ERD 작성 | Front & Back 개발| Github 페이지 관리 | - |
+| 5 week | PPT 완성 & 발표 | DB ERD 작성 | Front & Back 개발 | 결과물 제출 | - |
