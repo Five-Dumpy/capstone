@@ -20,7 +20,6 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.validation.Valid;
 import java.io.File;
 import java.security.Principal;
-import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Slf4j
@@ -69,19 +68,21 @@ public class BuyBoardController {
     public String buyForm(Model model, @RequestParam(required = false) Long id) {
         if(id == null) {
             model.addAttribute("buyBoard", new BuyBoard());
+            model.addAttribute("imageUpdate", 0);
         } else {
             BuyBoard buyBoard = buyBoardRepository.findById(id).orElse(null);
             model.addAttribute("buyBoard", buyBoard);
+            model.addAttribute("imageUpdate", 1);
         }
 
         return "board/buyform";
     }
-
     @PostMapping("/buy/form")  // 판매 폼 저장
     public String buyForm(@Valid BuyBoard buyBoard, BindingResult bindingResult, MultipartFile file, Authentication authentication) throws Exception {
         if(bindingResult.hasErrors()) {
             return "board/buyform";
         }
+
         if(file.isEmpty()) {
             buyBoard.setFilename("noImage.png");
             buyBoard.setFilepath("/files/noImage.png");

@@ -41,7 +41,6 @@
             <a class="dropdown-item">구매글</a>
             <a class="dropdown-item">공구글</a>
         </div>
-        <!-- <a class="btn btn-outline-primary" href="#">로그인</a> -->
         <div style="margin-left: 10%"></div>
     </div>
 
@@ -54,10 +53,21 @@
             <input type="hidden" th:field="*{datetime}">
             <input type="hidden" th:field="*{details}">
 
-            <div style="margin-bottom: 24px;">
+            <div style="margin-bottom: 24px;" th:if="${imageUpdate} == 0">
                 <span class="fileselect" id="fileName">선택된 파일없음</span>
                 <input type="file" name="file" accept="image/*" id="bizFile" style="display: none;">
                 <label for="bizFile" class="btn btn-primary my-0">파일선택</label>
+            </div>
+
+            <div style="margin-bottom: 24px;" th:if="${imageUpdate} == 1">
+                <button type="button" id="imageUpdateButton" class="btn btn-primary" onclick="onDisplay()">
+                    사진 수정</button>
+                <div id="updateImageForm" style="display: none;">
+                    <span class="fileselect" id="fileName">선택된 파일없음</span>
+                    <input type="file" name="file" accept="image/*" id="bizFile" style="display: none;">
+                    <label for="bizFile" class="btn btn-primary my-0">파일선택</label>
+                    <button type="button" class="btn btn-primary" onclick="offDisplay()">X</button>
+                </div>
             </div>
 
             <div class="form-group form-title">
@@ -85,7 +95,17 @@
             <button type="submit" class="btn btn-primary btn-submit">상품 등록하기</button>
     </div>
     </form>
+    <script>
+        function onDisplay() {
+            $('#updateImageForm').show();
+            $('#imageUpdateButton').hide();
+        }
 
+        function offDisplay() {
+            $('#updateImageForm').hide();
+            $('#imageUpdateButton').show();
+        }
+    </script>
     <script>
         document.getElementById('bizFile').addEventListener('change', function () {
             var filename = document.getElementById('fileName');

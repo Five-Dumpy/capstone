@@ -111,7 +111,7 @@ public class SellBoardController {
         if (detailNum == 2) {
             sellBoard.setDetails("예약 중");
         } else if (detailNum == 3) {
-            sellBoard.setDetails("구매 완료");
+            sellBoard.setDetails("판매 완료");
         } else {
             sellBoard.setDetails("진행 중");
         }
