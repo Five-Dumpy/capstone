@@ -52,14 +52,17 @@
             <input type="hidden" th:field="*{id}">
             <input type="hidden" th:field="*{datetime}">
             <input type="hidden" th:field="*{details}">
+            <input type="hidden" th:field="*{filename}">
 
-            <div style="margin-bottom: 24px;" th:if="${imageUpdate} == 0">
+            <div style="margin-bottom: 24px;"
+                th:if="${imageUpdate} == 0 or ${#strings.equals(buyBoard.filename, 'noImage.png')}">
                 <span class="fileselect" id="fileName">선택된 파일없음</span>
                 <input type="file" name="file" accept="image/*" id="bizFile" style="display: none;">
                 <label for="bizFile" class="btn btn-primary my-0">파일선택</label>
             </div>
 
-            <div style="margin-bottom: 24px;" th:if="${imageUpdate} == 1">
+            <div style="margin-bottom: 24px;"
+                th:if="${imageUpdate} == 1 and ${!#strings.equals(buyBoard.filename, 'noImage.png')}">
                 <button type="button" id="imageUpdateButton" class="btn btn-primary" onclick="onDisplay()">
                     사진 수정</button>
                 <div id="updateImageForm" style="display: none;">

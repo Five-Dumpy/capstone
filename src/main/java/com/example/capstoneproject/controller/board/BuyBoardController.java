@@ -77,6 +77,7 @@ public class BuyBoardController {
 
         return "board/buyform";
     }
+
     @PostMapping("/buy/form")  // 판매 폼 저장
     public String buyForm(@Valid BuyBoard buyBoard, BindingResult bindingResult, MultipartFile file, Authentication authentication) throws Exception {
         if(bindingResult.hasErrors()) {

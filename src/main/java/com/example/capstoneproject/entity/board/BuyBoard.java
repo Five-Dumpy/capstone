@@ -3,7 +3,6 @@ package com.example.capstoneproject.entity.board;
 import com.example.capstoneproject.entity.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
-import org.springframework.boot.context.properties.bind.DefaultValue;
 import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
