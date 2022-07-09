@@ -22,6 +22,8 @@
 
 ### Picture
 
+![KakaoTalk_20220708_145151658](https://user-images.githubusercontent.com/92522544/178093497-3589346f-0ffe-48b7-8d14-9790a3ca7064.jpg)
+
 ### Member
 | Name | Email | Role | Github |
 | ------ | ------ | ------ | ------ |
@@ -49,3 +51,13 @@
 | 3 week | 계획서 작성 | Github 페이지 생성 & DB ERD 기획 | PPT 제작 & 발표 | Front & Back 보완 | PPT 제작 & 발표 |
 | 4 week | 계획서 마무리 & PPT 제작 | DB ERD 작성 | Front & Back 개발| Github 페이지 관리 | - |
 | 5 week | PPT 완성 & 발표 | DB ERD 작성 | Front & Back 개발 | 결과물 제출 | - |
+
+## Members
+
+| 레드 | 그린 | 핑크 | 블루 | 옐로 |
+| ------ | ------ | ------ | ------ | ------ |
+| <img src="https://user-images.githubusercontent.com/92522544/178092964-429d22e8-98b4-4899-b0d2-c87c68e1128c.jpg" width="150" height="150" /> | <img src="https://user-images.githubusercontent.com/92522544/178094429-8b83651a-f4f0-473f-b530-2a0293bf4596.png" width="150" height="150" /> | <img src="https://user-images.githubusercontent.com/92522544/178094466-9fdd3f9a-7ca4-421c-bbd0-841f761ce465.jpg" width="150" height="150" /> | <img src="https://user-images.githubusercontent.com/92522544/178096721-38963bf3-60e8-42b7-a18a-a46fd5c6db82.jpg" width="150" height="150" /> | <img src="https://user-images.githubusercontent.com/92522544/178094320-435eb4b0-df93-400b-892d-fdf4666b234a.jpg" width="150" height="150" /> |
+| 팀장 | 팀원 | 팀원 | 팀원 | 팀원 |
+| 김윤현 | 박대형 | 장휴선 | 전지현 | 최근호 |
+|[Email](kyhofficial05@gmail.com)|nicenicnic123@gmall.com|hyuseonj771@gmail.com|wjswlguswjswlgus616@naver.com| c66182527@gmail.com| 
+
