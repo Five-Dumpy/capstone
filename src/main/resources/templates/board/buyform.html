@@ -56,7 +56,7 @@
 
             <div style="margin-bottom: 24px;"
                 th:if="${imageUpdate} == 0 or ${#strings.equals(buyBoard.filename, 'noImage.png')}">
-                <span class="fileselect" id="fileName">선택된 파일없음</span>
+                <span class="fileselect" id="fileName">선택된 파일 없음</span>
                 <input type="file" name="file" accept="image/*" id="bizFile" style="display: none;">
                 <label for="bizFile" class="btn btn-primary my-0">파일선택</label>
             </div>
@@ -66,14 +66,14 @@
                 <button type="button" id="imageUpdateButton" class="btn btn-primary" onclick="onDisplay()">
                     사진 수정</button>
                 <div id="updateImageForm" style="display: none;">
-                    <span class="fileselect" id="fileName">선택된 파일없음</span>
+                    <span class="fileselect" id="fileName" th:text="${fileName}">선택된
+                        파일 없음</span>
                     <input type="file" name="file" accept="image/*" id="bizFile" style="display: none;">
                     <label for="bizFile" class="btn btn-primary my-0">파일선택</label>
-                    <button type="button" class="btn btn-primary" onclick="offDisplay()">X</button>
                 </div>
             </div>
 
-            <div class="form-group form-title">
+            <div class=" form-group form-title">
                 <input type="text" class="form-control" id="productsTitle" placeholder="상품명을 입력해주세요."
                     th:field="*{title}" th:classappend="${#fields.hasErrors('title')} ? 'is-invalid'">
                 <div class="invalid-feedback" th:if="${#fields.hasErrors('title')}" th:errors="*{title}">
@@ -104,10 +104,6 @@
             $('#imageUpdateButton').hide();
         }
 
-        function offDisplay() {
-            $('#updateImageForm').hide();
-            $('#imageUpdateButton').show();
-        }
     </script>
     <script>
         document.getElementById('bizFile').addEventListener('change', function () {

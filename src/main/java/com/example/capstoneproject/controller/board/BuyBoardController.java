@@ -71,6 +71,11 @@ public class BuyBoardController {
             model.addAttribute("imageUpdate", 0);
         } else {
             BuyBoard buyBoard = buyBoardRepository.findById(id).orElse(null);
+            if (!buyBoard.getFilename().equals("noImage.png")) {
+                String filename = buyBoard.getFilename().split("_")[1];
+                model.addAttribute("fileName", filename);
+                model.addAttribute("selectedFileName", new String());
+            }
             model.addAttribute("buyBoard", buyBoard);
             model.addAttribute("imageUpdate", 1);
         }
@@ -79,14 +84,17 @@ public class BuyBoardController {
     }
 
     @PostMapping("/buy/form")  // 판매 폼 저장
-    public String buyForm(@Valid BuyBoard buyBoard, BindingResult bindingResult, MultipartFile file, Authentication authentication) throws Exception {
+    public String buyForm(@Valid BuyBoard buyBoard, BindingResult bindingResult, MultipartFile file,Authentication authentication) throws Exception {
         if(bindingResult.hasErrors()) {
             return "board/buyform";
         }
-
         if(file.isEmpty()) {
-            buyBoard.setFilename("noImage.png");
-            buyBoard.setFilepath("/files/noImage.png");
+            if (buyBoard.getFilename().equals("noImage.png")) {
+                buyBoard.setFilename("noImage.png");
+                buyBoard.setFilepath("/files/noImage.png");
+            } else {
+                buyBoard.setFilepath("/files/" + buyBoard.getFilename());
+            }
         } else {
             String projectPath = System.getProperty("user.dir") + "\\src\\main\\resources\\static\\files";
             UUID uuid = UUID.randomUUID();
@@ -101,7 +109,7 @@ public class BuyBoardController {
         return "redirect:/board/buy/list";
     }
 
-    @GetMapping("/buy/delete")  // 판매 게시글 삭제
+    @GetMapping("/buy/delete")  // 판매 게시글 삭제    
     public String buyFormDelete(@RequestParam Long id) {
         BuyBoard buyBoard = buyBoardRepository.findById(id).orElse(null);
         buyBoardRepository.delete(buyBoard);

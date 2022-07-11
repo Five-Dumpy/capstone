@@ -30,7 +30,7 @@
       <a class="toLink" th:href="@{/board/sell/list}">판매글</a>
       <a class="toLink" th:href="@{/board/cobuy/list}">공구글</a>
     </div>
-    <div style="margin-left: 8.7%"></div>
+    <div style="margin-left: 8.3%"></div>
     <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
       aria-expanded="false">
       게시글 작성
@@ -47,10 +47,10 @@
         검색
       </button>
     </form>
-    <a class="btn btn-outline-primary ml-2" style="width: 80px;" th:href="@{/account/login}"
+    <a class="btn btn-outline-primary ml-2" style="width: 90px;" th:href="@{/account/login}"
       sec:authorize="!isAuthenticated()">로그인</a>
     <div class="dropdown ml-2" style="text-align: center;" sec:authorize="isAuthenticated()">
-      <a class="btn btn-outline-primary px-0" style="width: 80px;" role="button" id="myInformation"
+      <a class="btn btn-outline-primary px-0" style="width: 90px;" role="button" id="myInformation"
         data-toggle="dropdown" aria-expanded="false" sec:authentication="name">
         사용자
       </a>
