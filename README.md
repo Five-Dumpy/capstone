@@ -27,11 +27,11 @@
 ### Member
 | Name | Email | Role | Github |
 | ------ | ------ | ------ | ------ |
-| 김윤현 | kyhofficial05@gmail.com |  | [Github](https://github.com/KYH-code) |
-| 박대형 | nicenicnic123@gmall.com |  | [Github](https://github.com/eoguddl) |
-| 장휴선 | hyuseonj771@gmail.com |  | [Github](https://github.com/Rongtutu) |
-| 전지현 | wjswlguswjswlgus616@naver.com |  | [Github](https://github.com/jihyeon0616) |
-| 최근호 | c66182527@gmail.com |  | [Github](https://www.github.com/cghsuw256) |
+| 김윤현 | kyhofficial05@gmail.com | front-end | [Github](https://github.com/KYH-code) |
+| 박대형 | nicenicnic123@gmall.com | back-end | [Github](https://github.com/eoguddl) |
+| 장휴선 | hyuseonj771@gmail.com | front-end | [Github](https://github.com/Rongtutu) |
+| 전지현 | wjswlguswjswlgus616@naver.com | back-end | [Github](https://github.com/jihyeon0616) |
+| 최근호 | c66182527@gmail.com | front-end | [Github](https://www.github.com/cghsuw256) |
 
 ## Skill
 
