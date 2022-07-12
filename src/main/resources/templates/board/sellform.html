@@ -43,19 +43,19 @@
         </div>
         <!-- <a class="btn btn-outline-primary" href="#">로그인</a> -->
         <div style="margin-left: 10%"></div>
-    </div>
+    </div>ㄴ
 
 
     <div class="container container-sm container-item-create">
         <h5 class="container-headline mt-5">판매 상품 등록</h5>
-        <form class="form-item-create" method="post" enctype="multipart/form-data" th:action="@{/board/sell/form}"
-            th:object="${sellBoard}">
+        <form class="form-item-create" method="post" style="padding-bottom: 180px;" enctype="multipart/form-data"
+            th:action="@{/board/sell/form}" th:object="${sellBoard}">
             <input type="hidden" th:field="*{id}">
             <input type="hidden" th:field="*{datetime}">
             <input type="hidden" th:field="*{details}">
 
             <div style="margin-bottom: 24px;">
-                <span class="fileselect" id="fileName">선택된 파일없음</span>
+                <span class="fileselect" id="fileName">선택된 파일 없음</span>
                 <input type="file" name="file" accept="image/*" id="bizFile" style="display: none;">
                 <label for="bizFile" class="btn btn-primary my-0">파일선택</label>
             </div>
@@ -85,6 +85,8 @@
             <button type="submit" class="btn btn-primary btn-submit">상품 등록하기</button>
     </div>
     </form>
+    <!-- <hr class="line" style="border: 1px solid #d3d3d3; margin-top: 30px; margin-bottom: 0px;"> -->
+    <footer style="margin: 0; padding: 0px" th:replace="fragments/common :: footer"></footer>
 
     <script>
         document.getElementById('bizFile').addEventListener('change', function () {

@@ -44,7 +44,7 @@
         <div style="margin-left: 10%"></div>
     </div>
 
-    <div class="container container-sm container-detail">
+    <div class="container container-sm container-detail" style="padding-bottom: 150px;">
         <div class="my-5 imgdiv">
             <img src="../../static/images/sowon.png" height="100%" th:src="${buyBoard.filepath}">
         </div>
@@ -60,7 +60,7 @@
                     style="height: 30px; display: flex; align-items:center;">
                     설정
                 </button>
-                <div class="dro pdown-menu text-center" aria-labelledby="dropdownMenuButton">
+                <div class="dropdown-menu text-center" aria-labelledby="dropdownMenuButton">
                     <a class="dropdown-item" th:href="@{/board/buy/form(id=${buyBoard.id})}">게시글 수정</a>
                     <a class="dropdown-item" th:href="@{/board/buy/delete(id=${buyBoard.id})}">게시글 삭제</a>
                 </div>
@@ -81,13 +81,8 @@
         <hr>
         <div style="word-break:break-all; font-size: 18px;" th:text="${buyBoard.content}">설명</div>
     </div>
-
-    <footer>
-        <div class="container">
-            <a href="index.html">2022 사고, 팔고, 공구하고</a>
-            <h6>480/ 김윤현, 박대형, 최근호, 전지현, 장휴선</h6>
-        </div>
-    </footer>
+    <!-- <hr class="line" style="border: 1px solid #d3d3d3; margin-top: 30px; margin-bottom: 0px;"> -->
+    <footer style="margin: 0; padding: 0px" th:replace="fragments/common :: footer"></footer>
     <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script> -->

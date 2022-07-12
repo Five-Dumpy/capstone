@@ -109,7 +109,7 @@ public class BuyBoardController {
         return "redirect:/board/buy/list";
     }
 
-    @GetMapping("/buy/delete")  // 판매 게시글 삭제    
+    @GetMapping("/buy/delete")  // 판매 게시글 삭제
     public String buyFormDelete(@RequestParam Long id) {
         BuyBoard buyBoard = buyBoardRepository.findById(id).orElse(null);
         buyBoardRepository.delete(buyBoard);

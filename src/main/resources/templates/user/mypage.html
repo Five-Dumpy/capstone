@@ -43,18 +43,6 @@
     <div style="margin-left: 10%"></div>
   </div>
 
-  <ul id="slider" style="border: none">
-    <li>
-      <img class="banner" src="/static/images/banner1.png" th:src="@{/images/banner1.png}" />
-    </li>
-    <li>
-      <img class="banner" src="/static/images/banner2.png" th:src="@{/images/banner2.png}" />
-    </li>
-    <li>
-      <img class="banner" src="/static/images/banner3.png" th:src="@{/images/banner3.png}" />
-    </li>
-  </ul>
-
   <div style="width: 79%; margin: 0 auto; margin-top: 20px;">
     <div class="buy-box" style="margin-top: 20px;">
       <div class="mb-2" style="display: flex; align-items: flex-end; justify-content: space-between;">
@@ -74,61 +62,7 @@
         </div>
       </div>
     </div>
-    <div class="sell-box" style="margin-top: 20px;">
-      <div class="mb-2" style="display: flex; align-items: flex-end; justify-content: space-between;">
-        <span style="font-family: 'Noto Sans KR', sans-serif; font-size: 35px;">최근 판매글</span>
-        <a th:href="@{/board/sell/list}">
-          <span>+ 더보기</span>
-        </a>
-      </div>
-      <hr class="line" style="border: 1px solid gainsboro; margin-top: 0;">
-      <div class="swiper mySwiper" style="display: flex;">
-        <div class="swiper-wrapper">
-          <a class="swiper-slide" th:each="sellBoard : ${sellBoards}" th:href="@{/board/sell(id=${sellBoard.id})}">
-            <li class="img-form">
-              <img style="max-height: 200px;" th:src="${sellBoard.filepath}">
-            </li>
-          </a>
-        </div>
-      </div>
-    </div>
   </div>
-  <hr class="line" style="border: 1px solid #d3d3d3; margin-top: 30px; margin-bottom: 0px;">
-  <footer style="margin: 0; padding: 0px" th:replace="fragments/common :: footer"></footer>
-
-  <!-- banner -->
-  <script>
-    // Slide every slideDelay seconds
-    const slideDelay = 4000;
-
-    const dynamicSlider = document.getElementById("slider");
-
-    var curSlide = 0;
-    window.setInterval(() => {
-      curSlide++;
-      if (curSlide === dynamicSlider.childElementCount) {
-        curSlide = 0;
-      }
-      dynamicSlider.firstElementChild.style.setProperty("margin-left", "-" + curSlide + "00%");
-    }, slideDelay);
-  </script>
-
-  <!-- swiper js -->
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <!-- swiper -->
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 10,
-      slidesPerGroup: 1,
-      autoplay: {
-        delay: 1750,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-      }
-    });
-  </script>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

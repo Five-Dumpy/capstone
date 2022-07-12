@@ -47,8 +47,8 @@
 
     <div class="container container-sm container-item-create">
         <h5 class="container-headline mt-5">구매 상품 등록</h5>
-        <form class="form-item-create" method="post" enctype="multipart/form-data" th:action="@{/board/buy/form}"
-            th:object="${buyBoard}">
+        <form class="form-item-create" method="post" style="padding-bottom: 180px;" enctype="multipart/form-data"
+            th:action="@{/board/buy/form}" th:object="${buyBoard}">
             <input type="hidden" th:field="*{id}">
             <input type="hidden" th:field="*{datetime}">
             <input type="hidden" th:field="*{details}">
@@ -98,6 +98,8 @@
             <button type="submit" class="btn btn-primary btn-submit">상품 등록하기</button>
     </div>
     </form>
+    <!-- <hr class="line" style="border: 1px solid #d3d3d3; margin-top: 30px; margin-bottom: 0px;"> -->
+    <footer style="margin: 0; padding: 0px" th:replace="fragments/common :: footer"></footer>
     <script>
         function onDisplay() {
             $('#updateImageForm').show();
