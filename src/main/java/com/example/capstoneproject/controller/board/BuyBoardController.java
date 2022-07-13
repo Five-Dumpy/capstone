@@ -96,7 +96,8 @@ public class BuyBoardController {
                 buyBoard.setFilepath("/files/" + buyBoard.getFilename());
             }
         } else {
-            String projectPath = System.getProperty("user.dir") + "\\src\\main\\resources\\static\\files";
+            String projectPath = "\\home\\ubuntu\\IdeaProjects\\src\\main\\resources\\static\\files";
+//            String projectPath = "\\home\\ubuntu\\IdeaProjects\\src\\main\\resources\\static\\files\";
             UUID uuid = UUID.randomUUID();
             String fileName = uuid + "_" + file.getOriginalFilename();
             File saveFile = new File(projectPath, fileName);
