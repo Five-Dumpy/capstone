@@ -52,3 +52,4 @@
 | 4 week | 계획서 마무리 & PPT 제작 | DB ERD 작성 | Front & Back 개발| Github 페이지 관리 | - |
 | 5 week | PPT 완성 & 발표 | DB ERD 작성 | Front & Back 개발 | 결과물 제출 | - |
 
+## 프로젝트 자료
