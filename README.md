@@ -58,6 +58,6 @@
 
 ### 순서도와 DB ERD
 
-<img src="https://user-images.githubusercontent.com/92522544/178936101-de6afb67-dee8-4e0d-940a-9428812edb57.png" width="440px"><img src="https://user-images.githubusercontent.com/92522544/178936772-4eeb08b0-9760-4ccd-8031-41eb422ac8e8.png" width="440px">
+<img src="https://user-images.githubusercontent.com/92522544/178936101-de6afb67-dee8-4e0d-940a-9428812edb57.png" width="450px"><img src="https://user-images.githubusercontent.com/92522544/178936772-4eeb08b0-9760-4ccd-8031-41eb422ac8e8.png" width="450px">
 
 
